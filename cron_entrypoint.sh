@@ -14,7 +14,7 @@ echo "ACTUAL_SERVER_URL=\"$ACTUAL_SERVER_URL\"" >> /etc/crontabs/root
 echo "ACTUAL_SERVER_PASSWORD=\"$ACTUAL_SERVER_PASSWORD\"" >> /etc/crontabs/root
 echo "ACTUAL_BUDGET_CURRENCY=\"$ACTUAL_BUDGET_CURRENCY\"" >> /etc/crontabs/root
 echo "EXCHANGE_RATE_API_KEY=\"$EXCHANGE_RATE_API_KEY\"" >> /etc/crontabs/root
-echo "$CRON_SCHEDULE /usr/local/bin/node /usr/src/app/dist/index.js 2>&1 | tee -a /var/log/cron.log" >> /etc/crontabs/root
+echo "$CRON_SCHEDULE cd /usr/src/app && /usr/local/bin/node /usr/src/app/dist/index.js 2>&1 | tee -a /var/log/cron.log" >> /etc/crontabs/root
 
 # Give execute permissions to the crontab file
 chmod 0644 /etc/crontabs/root

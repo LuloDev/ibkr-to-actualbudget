@@ -10,4 +10,4 @@ echo "$CRON_SCHEDULE node /usr/src/app/dist/index.js >> /var/log/cron.log 2>&1" 
 chmod 0644 /etc/crontabs/root
 
 # Start cron in the foreground
-cron -f
+crond -f

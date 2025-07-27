@@ -94,11 +94,6 @@ services:
     volumes:
       # Optional: Mount a volume for logs or other persistent data if needed
       - data-ibkr:/usr/src/app/data
-networks:
-  default:
-    # You might want to use an external network if Actual Budget is in another compose file
-    # external: true
-    # name: your_actual_budget_network
 volumes:
   data-ibkr: null
 ```

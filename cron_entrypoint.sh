@@ -19,6 +19,9 @@ echo "$CRON_SCHEDULE cd /usr/src/app && /usr/local/bin/node /usr/src/app/dist/in
 # Give execute permissions to the crontab file
 chmod 0644 /etc/crontabs/root
 
+# Run the job once immediately for verification
+cd /usr/src/app && /usr/local/bin/node /usr/src/app/dist/index.js 2>&1 | tee -a /var/log/cron.log
+
 # Start cron in the foreground
 crond
 touch /var/log/cron.log

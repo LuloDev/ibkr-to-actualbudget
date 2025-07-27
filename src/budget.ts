@@ -37,16 +37,15 @@ export async function updateBudget(ibkrData: { balance: number; currency: string
       return;
     }
 
-    const transactionType = difference > 0 ? 'Deposit' : 'Withdrawal';
     const newTransaction = {
       account: syncAccountId,
       amount: actualApi.utils.amountToInteger(difference),
       date: new Date().toISOString().split('T')[0],
       payee_name: 'IBKR Balance Adjustment',
-      notes: `Balance adjustment from Interactive Brokers (${transactionType})`,
+      notes: `Balance adjustment from Interactive Brokers`,
     };
 
-    logger.info(`Calculated difference: ${difference}. Creating a ${transactionType} transaction for this amount.`);
+    logger.info(`Calculated difference: ${difference}. Creating transaction for this amount.`);
     await actualApi.addTransactions(syncAccountId, [newTransaction]);
     logger.info(`Successfully added a balance adjustment transaction of ${difference} to Actual Budget.`);
 

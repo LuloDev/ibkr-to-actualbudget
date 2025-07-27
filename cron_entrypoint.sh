@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export IBKR_TOKEN=$IBKR_TOKEN
+
 # Default cron schedule
 CRON_SCHEDULE=${CRON_SCHEDULE:-'55 23 * * *'}
 

@@ -12,6 +12,5 @@ import logger from './logger';
     logger.info('Daily balance update completed successfully.');
   } catch (error) {
     logger.error('An error occurred during daily balance update:', error);
-    process.exit(1);
   }
 })();

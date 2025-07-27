@@ -4,11 +4,11 @@ This program retrieves your account balance from Interactive Brokers and updates
 
 ## Features
 
-*   **Automated Balance Retrieval**: Automatically fetches account balance data from Interactive Brokers using Flex Queries.
-*   **Actual Budget Integration**: Updates a specified account in Actual Budget with the latest balance.
-*   **Currency Conversion**: Supports currency conversion between IBKR and Actual Budget using ExchangeRate-API.
-*   **Configurable Scheduling**: Runs as a daily cron job within a Docker container, with the schedule configurable via environment variables.
-*   **Docker Compose Support**: Easily deployable and manageable using Docker Compose.
+- **Automated Balance Retrieval**: Automatically fetches account balance data from Interactive Brokers using Flex Queries.
+- **Actual Budget Integration**: Updates a specified account in Actual Budget with the latest balance.
+- **Currency Conversion**: Supports currency conversion between IBKR and Actual Budget using ExchangeRate-API.
+- **Configurable Scheduling**: Runs as a daily cron job within a Docker container, with the schedule configurable via environment variables.
+- **Docker Compose Support**: Easily deployable and manageable using Docker Compose.
 
 ## Setup
 
@@ -71,7 +71,7 @@ npm run dev
 
 ### Running with Docker Compose
 
-You can use Docker Compose to manage the `ibkr-to-actualbudget` service. Create a `docker-compose.yml` file in your project root with the following content:
+You can use Docker Compose to manage the `ibkr-to-actualbudget` service.
 
 ```yaml
 version: "3.8"

@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # Install cron
-RUN apk add --no-cache cron
+RUN apk add --no-cache cronie
 
 # Copy the cron entrypoint script
 COPY cron_entrypoint.sh /usr/local/bin/cron_entrypoint.sh

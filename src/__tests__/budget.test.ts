@@ -61,9 +61,9 @@ describe('updateBudget', () => {
       {
         account: config.actual.syncAccountId,
         amount: Math.round(expectedDifference * 100),
-        date: expect.any(String),
+        date: new Date().toISOString().split('T')[0],
         payee_name: 'IBKR Balance Adjustment',
-        notes: `Balance adjustment from Interactive Brokers (Deposit)`,
+        notes: 'Balance adjustment from Interactive Brokers',
       },
     ]);
     expect(mockedConvertCurrency).not.toHaveBeenCalled();
@@ -83,9 +83,9 @@ describe('updateBudget', () => {
       {
         account: config.actual.syncAccountId,
         amount: Math.round(expectedDifference * 100),
-        date: expect.any(String),
+        date: new Date().toISOString().split('T')[0],
         payee_name: 'IBKR Balance Adjustment',
-        notes: `Balance adjustment from Interactive Brokers (Withdrawal)`,
+        notes: 'Balance adjustment from Interactive Brokers',
       },
     ]);
     expect(mockedConvertCurrency).not.toHaveBeenCalled();
@@ -124,9 +124,9 @@ describe('updateBudget', () => {
       {
         account: testConfig.actual.syncAccountId,
         amount: Math.round(expectedDifference * 100),
-        date: expect.any(String),
+        date: new Date().toISOString().split('T')[0],
         payee_name: 'IBKR Balance Adjustment',
-        notes: `Balance adjustment from Interactive Brokers (Deposit)`,
+        notes: 'Balance adjustment from Interactive Brokers',
       },
     ]);
   });
@@ -151,9 +151,9 @@ describe('updateBudget', () => {
       {
         account: testConfig.actual.syncAccountId,
         amount: Math.round(expectedDifference * 100),
-        date: expect.any(String),
+        date: new Date().toISOString().split('T')[0],
         payee_name: 'IBKR Balance Adjustment',
-        notes: `Balance adjustment from Interactive Brokers (Withdrawal)`,
+        notes: 'Balance adjustment from Interactive Brokers',
       },
     ]);
   });

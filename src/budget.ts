@@ -12,6 +12,7 @@ export async function updateBudget(ibkrData: { balance: number; currency: string
     await actualApi.init({
       serverURL: serverUrl,
       password: serverPassword,
+      dataDir: './data'
     });
 
     await actualApi.downloadBudget(budgetId);

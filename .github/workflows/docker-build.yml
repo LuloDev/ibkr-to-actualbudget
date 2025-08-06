@@ -2,13 +2,13 @@ name: Build and Push Docker Images
 
 on:
   push:
-    branches:
-      - main
+    #branches:
+    #  - main
     tags:
       - '*' # Run on new tags
-  pull_request:
-    branches:
-      - main
+  #pull_request:
+  #  branches:
+  #    - main
 
 jobs:
   test:
@@ -38,7 +38,7 @@ jobs:
       contents: read
 
     needs: test # This job depends on the 'test' job passing
-    if: startsWith(github.ref, 'refs/tags/') # Only run this job when a tag is pushed
+    #if: startsWith(github.ref, 'refs/tags/') # Only run this job when a tag is pushed
 
     steps:
       - name: Checkout repository

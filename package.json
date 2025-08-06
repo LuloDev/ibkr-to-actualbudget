@@ -13,21 +13,21 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@actual-app/api": "^25.7.1",
+    "@actual-app/api": "^25.8.0",
     "axios": "^1.11.0",
     "winston": "^3.17.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.2.0",
     "@types/xml2js": "^0.4.14",
     "axios-mock-adapter": "^2.1.0",
     "dotenv": "^17.2.1",
     "jest": "^30.0.5",
     "mock-axios": "^0.0.1",
     "nodemon": "^3.1.10",
-    "ts-jest": "^29.4.0",
-    "typescript": "^5.8.3"
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
   }
 }

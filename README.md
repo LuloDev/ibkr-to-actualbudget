@@ -22,11 +22,32 @@ This program retrieves your account balance from Interactive Brokers and updates
 
    Create a `.env` file in the root of the project by copying `.env.sample` and filling in your credentials.
    - **`IBKR_FLEX_QUERY_TOKEN`**: Your Interactive Brokers Flex Query Token.
-     - To obtain this, log in to Client Portal, go to **Reports > Flex Queries**, and create a new Flex Query.
-     - Ensure the query includes **Account Balance** data.
-     - Once created, you will find your token associated with the query.
+     - To obtain this, log in to Client Portal, go to **Reports > Flex Queries**, generate token in **Flex Web Service Configuration**.
+
    - **`IBKR_FLEX_QUERY_ID`**: The ID of your Flex Query.
-     - This is also found in the Flex Queries section of Client Portal, next to your Flex Query name.
+     - To generate a report in IBKR, follow these steps:
+       1. Log in to your account on the web app.
+       2. Navigate to Performance & Reports > Flex Queries.
+       3. Create a new Activity Flex Query.
+       4. Select **Net Asset Value (NAV)** in Base.
+       5. Activate the following options:
+          - Account Id
+          - Account alias
+          - Currency
+          - Report Date
+          - Total
+          - Cash
+          - Stock
+       6. Configure the following options:
+          Models: Optional
+          Format: XML
+          Period: Last Business Day
+          Date Format: dd/MM/yyyy
+          Time Format: HHmmss
+          Date/Time Separator: ' ' (single space)
+          Other options: Default
+       7. Create the report and click the edit button to view the `Query ID`
+
    - **`ACTUAL_BUDGET_URL`**: The URL of your Actual Budget instance (e.g., `http://localhost:5000`).
    - **`ACTUAL_BUDGET_PASSWORD`**: Your Actual Budget password.
    - **`ACTUAL_BUDGET_BUDGET_ID`**: The ID of the budget you want to update in Actual Budget.

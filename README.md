@@ -127,6 +127,11 @@ To run the service:
 docker compose up -d
 ```
 
+## Recommendation
+
+I have seen better results when running the process on weekends. The balance is closer to the market close, and it only creates one movement per week instead of one every day.
+To do this, you can use the following cron schedule: `55 23 * * 6`
+
 ## Troubleshooting
 
 - **`Error: Request failed with status code 404` or `Network Error`**:
